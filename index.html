@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">You are in 🐍 World</h1>
+        <div class="game-stats">
+            <div class="game-stats">
+                <p>Score: <span id="score">0</span></p>
+                <label for="mode">Difficulty:</label>
+                <select name="mode" id="difficulty">
+                    <option value="easy">Easy Peasy</option>
+                    <option value="medium">Moody Medium</option>
+                    <option value="hard">Hard as Rock</option>
+                </select>
+            </div>
+        </div>
+        <div class="play-board" id="game-console"></div>
+        
+        <!-- Mobile Controls -->
+        <div class="mobile-controls">
+            <button class="arrow-btn up" onclick="moveSnake('up')">↑</button>
+            <div>
+                <button class="arrow-btn left" onclick="moveSnake('left')">←</button>
+                <button class="arrow-btn down" onclick="moveSnake('down')">↓</button>
+                <button class="arrow-btn right" onclick="moveSnake('right')">→</button>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
