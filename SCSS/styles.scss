@@ -1,0 +1,130 @@
+@import url('boxing.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Boxing-Regular;
+    color: #FFFFE3;
+    background-image: url('../assets/download (2).jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+
+    .heading {
+        font-size: 7rem;
+    }
+
+    .game-stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 100px;
+        font-size: 2rem;
+    }
+}
+
+.play-board {
+    height: 65vh;
+    width: 65vh;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    border: 5px solid #FFFFE3;
+    background-image: url('../assets/download (3).jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .food {
+        background-color: red;
+    }
+
+    .snake {
+        background-color: black;
+    }
+}
+
+/* Mobile Controls */
+.mobile-controls {
+    display: none; // Hide by default
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .arrow-btn {
+        background-color: #FFFFE3;
+        color: black;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+
+    div {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        gap: 10px;
+
+        .heading {
+            font-size: 4rem;
+        }
+
+        .game-stats {
+            flex-direction: column;
+            gap: 10px;
+            font-size: 1.5rem;
+        }
+    }
+
+    .play-board {
+        height: 80vw;
+        width: 80vw;
+    }
+
+    .mobile-controls {
+        display: flex; // Show on mobile
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        .heading {
+            font-size: 3rem;
+        }
+
+        .game-stats {
+            font-size: 1.2rem;
+        }
+    }
+
+    .play-board {
+        height: 90vw;
+        width: 90vw;
+    }
+}
